@@ -2,6 +2,7 @@ package Request;
 
 import java.io.Serializable;
 import Database.User;
+import Constants.reqEnum;
 
 public class LoginRequest implements Serializable {
 
@@ -39,9 +40,9 @@ public class LoginRequest implements Serializable {
      *
      * @return
      */
-  /*  @Override
+   @Override
     public String toString(){
+        return "" + reqEnum.LoginRequest;
 
-
-    }*/
+    }
 }

@@ -1,6 +1,8 @@
 package Request;
 
 
+import Constants.reqEnum;
+
 import java.io.Serializable ;
 
 public class SignupRequest {
@@ -48,9 +50,9 @@ public class SignupRequest {
      * @return
 
      */
-  /*  @Override
+    @Override
     public String toString(){
+        return "" + reqEnum.SignupRequest;
 
-
-    }*/
+    }
 }
