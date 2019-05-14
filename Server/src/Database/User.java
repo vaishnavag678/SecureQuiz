@@ -10,37 +10,43 @@ public class User implements Serializable {
     private String fname;
     private String lname;
 
-    public String getfname() {
+    public String getUserid() {
+        return userid;
+    }
+
+    public void setUserid(String userid) {
+        this.userid = userid;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getFname() {
         return fname;
     }
 
-    public void setfname(String fname){
-        this.fname=fname;
+    public void setFname(String fname) {
+        this.fname = fname;
     }
 
-    public  void setemail(String email){
-        this.email=email;
-    }
-    public String getemail(){
-        return email;
-    }
-    public String getlname(){
+    public String getLname() {
         return lname;
     }
-    public void setlame(String lname){
-        this.lname=lname;
-    }
 
-    public void setuserid(String userid){
-        this.userid=userid;
-    }
-    public String getuserid(){
-        return userid;
-    }
-    public String getpassword(){
-        return password;
-    }
-    public void setpassword(String password){
-        this.password=password;
+    public void setLname(String lname) {
+        this.lname = lname;
     }
 }
