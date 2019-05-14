@@ -29,8 +29,23 @@ public class DataBaseLoader {
         }
     }
 
+    /*
+    Method to close the Database connection.
+     */
+    public void close()
+    {
+        try
+        {
+            st.close();
+            connection.close();
 
-
+        }
+        catch (Exception e)
+        {
+            // Ignored the exceptions
+            System.out.println(""+ e);
+        }
+    }
 
 
 

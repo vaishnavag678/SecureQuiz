@@ -1,8 +1,10 @@
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
+import Database.DataBaseLoader;
 
 public class Server {
+    public static  DataBaseLoader db = new DataBaseLoader();
     public static void main(String args[])
     {
         ServerSocket serverSocket=null;
@@ -21,7 +23,7 @@ public class Server {
             {
                 try {
                     socket = serverSocket.accept();
-                    System.out.println("A new Client Accepted ");
+                    System.out.println("A new Client" + socket.getRemoteSocketAddress().toString() +" Accepted ");
                     Thread t = new Thread(new RequestHandler(socket));
                     t.start();
                 } catch (IOException e) {
