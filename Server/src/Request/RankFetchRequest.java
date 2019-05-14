@@ -3,6 +3,8 @@ package Request;
 
 import java.io.Serializable ;
 import java.util.*;
+
+import Constants.reqEnum;
 import javafx.util.Pair;
 
 public class RankFetchRequest implements Serializable {
@@ -30,9 +32,8 @@ public class RankFetchRequest implements Serializable {
     public void setQuizid(String quizid) {
         this.quizid = quizid;
     }
-         /*  @Override
+    @Override
     public String toString(){
-
-
-    }*/
+        return "" + reqEnum.RankFetchRequest;
+    }
 }
