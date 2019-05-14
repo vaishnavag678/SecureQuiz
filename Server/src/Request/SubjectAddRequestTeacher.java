@@ -4,7 +4,7 @@ package Request;
 import java.io.Serializable ;
 import java.util.*;
 import javafx.util.Pair;
-public class SubjectAddRequestTeacher {
+public class SubjectAddRequestTeacher implements Serializable {
 
     private String teacherid;
     ArrayList<Integer>  id=new ArrayList<Integer>(1000);
