@@ -3,13 +3,17 @@ import java.io.Serializable ;
 
 public class SubjectListFetchRequestStudent implements Serializable {
 
-    private String studentid;
+    private int studentid;
 
-    public String getStudentid() {
+    public SubjectListFetchRequestStudent(int studentid) {
+        this.studentid = studentid;
+    }
+
+    public int getStudentid() {
         return studentid;
     }
 
-    public void setStudentid(String studentid) {
+    public void setStudentid(int studentid) {
         this.studentid = studentid;
     }
 

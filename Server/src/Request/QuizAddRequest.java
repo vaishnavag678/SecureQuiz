@@ -5,12 +5,12 @@ import Constants.reqEnum;
 import java.io.Serializable;
 
 public class QuizAddRequest implements Serializable {
-    private int duration,qid,maxMarks;
+    private int duration,maxMarks;
     String QuizName;
-    public QuizAddRequest(int duration,int qid,int maxMarks,String QuizName)
+    public QuizAddRequest(int duration,int maxMarks,String QuizName)
     {
         this.duration=  duration;
-        this.qid = qid;
+        //this.qid = qid;
         this.maxMarks=maxMarks;
         this.QuizName = QuizName;
     }
@@ -25,14 +25,6 @@ public class QuizAddRequest implements Serializable {
 
     public void setDuration(int duration) {
         this.duration = duration;
-    }
-
-    public int getQid() {
-        return qid;
-    }
-
-    public void setQid(int qid) {
-        this.qid = qid;
     }
 
     public int getMaxMarks() {

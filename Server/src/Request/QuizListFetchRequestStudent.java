@@ -4,11 +4,11 @@ import Constants.reqEnum;
 import java.io.Serializable;
 
 public class QuizListFetchRequestStudent implements Serializable {
-    private int StudentId,TeacherId,SubId;
+    private int StudentId,SubId;
 
-    public QuizListFetchRequestStudent(int studentId, int teacherId, int subId) {
+    public QuizListFetchRequestStudent(int studentId,  int subId) {
         StudentId = studentId;
-        TeacherId = teacherId;
+        //TeacherId = teacherId;
         SubId = subId;
     }
 
@@ -23,13 +23,6 @@ public class QuizListFetchRequestStudent implements Serializable {
         StudentId = studentId;
     }
 
-    public int getTeacherId() {
-        return TeacherId;
-    }
-
-    public void setTeacherId(int teacherId) {
-        TeacherId = teacherId;
-    }
 
     public int getSubId() {
         return SubId;

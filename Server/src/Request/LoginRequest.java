@@ -6,15 +6,21 @@ import Constants.reqEnum;
 
 public class LoginRequest implements Serializable {
 
-    private  String userid;
+    private  int userid;
     private String password;
     private String email;
 
-    public String getUserid() {
+    public LoginRequest(int userid, String password, String email) {
+        this.userid = userid;
+        this.password = password;
+        this.email = email;
+    }
+
+    public int getUserid() {
         return userid;
     }
 
-    public void setUserid(String userid) {
+    public void setUserid(int userid) {
         this.userid = userid;
     }
 

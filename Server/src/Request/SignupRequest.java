@@ -12,6 +12,16 @@ public class SignupRequest {
     private String email;
     private String password;
 
+    public SignupRequest() {
+    }
+
+    public SignupRequest(String fname, String lname, String email, String password) {
+        this.fname = fname;
+        this.lname = lname;
+        this.email = email;
+        this.password = password;
+    }
+
     public String getFname() {
         return fname;
     }
