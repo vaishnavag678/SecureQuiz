@@ -1,34 +1,17 @@
 package Request;
 
 import java.io.Serializable;
-import Database.User;
+
 import Constants.reqEnum;
 
 public class LoginRequest implements Serializable {
 
-    private  int userid;
-    private String password;
+
     private String email;
+    private String password;
 
-    public LoginRequest(int userid, String password, String email) {
-        this.userid = userid;
-        this.password = password;
+    public LoginRequest(String email, String password) {
         this.email = email;
-    }
-
-    public int getUserid() {
-        return userid;
-    }
-
-    public void setUserid(int userid) {
-        this.userid = userid;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
         this.password = password;
     }
 
@@ -38,6 +21,14 @@ public class LoginRequest implements Serializable {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     /*************

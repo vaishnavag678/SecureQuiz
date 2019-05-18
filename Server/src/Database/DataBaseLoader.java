@@ -85,7 +85,7 @@ public class DataBaseLoader {
         }
     }
 
-
-
-
+    public Connection getConnection() {
+        return connection;
+    }
 }
