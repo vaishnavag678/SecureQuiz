@@ -3,6 +3,8 @@ package ServerClasses;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.ArrayList;
+
 import Database.DataBaseLoader;
 import Request.*;
 public class Server {
@@ -23,8 +25,16 @@ public class Server {
         req = new SignupRequest("Abhijeet","Biswas","mpsabhijeet10@gmail.com","pass2");
         System.out.println(SignUp.signUp(req));
         */
+        /*
+        //Testing QuizListFetch Student
 
-
+        QuizListFetchRequestStudent req = new QuizListFetchRequestStudent(1,2);
+        ArrayList<Quiz> Qlist = QuizListFetchStudent.quizFetch(req);
+        for(Quiz q : Qlist)
+        {
+            System.out.println(" "+q.getQuizName()+" "+q.getDuration() + " "+q.getMaxMarks()+" "+q.getQid());
+        }
+        */
         try {
             serverSocket = new ServerSocket(6963);
         }
