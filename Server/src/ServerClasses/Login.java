@@ -37,13 +37,13 @@ public class Login {
                     user.setEmail(rs.getString(4));
                     user.setFname(rs.getString(2));
                     user.setLname(rs.getString(3));
-                    user.setUSER_LOGIN_STATUS(String.valueOf(LoginStatus.SUCCESS));
+                    user.setUSER_LOGIN_STATUS(""+LoginStatus.SUCCESS);
                     user.setType(rs.getInt(5));
                     return user;
                 }
             }
             if(found)
-                user.setUSER_LOGIN_STATUS(String.valueOf(LoginStatus.WRONG_CREDENTIALS));
+                user.setUSER_LOGIN_STATUS(""+LoginStatus.WRONG_CREDENTIALS);
             return user;
         }
         catch (Exception e)
