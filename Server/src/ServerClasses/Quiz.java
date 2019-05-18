@@ -6,6 +6,7 @@ import java.sql.SQLException;
 public class Quiz {
     private int duration,qid,maxMarks;
     String QuizName;
+
     public Quiz(int duration,int qid,int maxMarks,String name)
     {
         this.duration =duration;
