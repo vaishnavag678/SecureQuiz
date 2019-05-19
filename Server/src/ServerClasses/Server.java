@@ -3,34 +3,38 @@ package ServerClasses;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.ArrayList;
+
 import Database.DataBaseLoader;
 import Request.*;
+import javafx.util.Pair;
+
 public class Server {
     public static  DataBaseLoader db = new DataBaseLoader();
     public static void main(String args[])
     {
         ServerSocket serverSocket=null;
     /*
-        //testing userLogin
-        LoginRequest req = new LoginRequest("mpsabhijeet@gmail.com","passwd");
-        User user = Login.userLogin(req);
-        System.out.println(""+user.getEmail()+" "+user.getFname()+" "+user.getLname()+" "+ user.getUserid()+" "+user.getUSER_LOGIN_STATUS()+" "+user.getType());
-        */
-    /*
-        // Testing user Signup
-        SignupRequest req = new SignupRequest("Abhijeet","Biswas","mpsabhijeet@gmail.com","pass");
-        System.out.println(SignUp.signUp(req));
-        req = new SignupRequest("Abhijeet","Biswas","mpsabhijeet10@gmail.com","pass2");
-        System.out.println(SignUp.signUp(req));
-        */
+        //Testing RankFetch
+        ArrayList<Pair<Integer,Integer>> list = new ArrayList<>();
+        list.add(new Pair<>(9,1));
+        list.add(new Pair<>(10,1));
+        list.add(new Pair<>(11,1));
+        list.add(new Pair<>(12,1));
+        QuizResponseRequest req = new QuizResponseRequest(1,4,1,list,16);
+        System.out.println(QuizResponse.saveResponse(req));
 
+
+        ScoreFetchRequest r = new ScoreFetchRequest(20,1);
+        System.out.println(ScoreFetch.scoreFetch(r));
+        */
 
         try {
             serverSocket = new ServerSocket(6963);
         }
         catch (Exception ex)
         {
-            System.out.println("Exception Occured");
+            ex.printStackTrace();
         }
         while(true)
         {

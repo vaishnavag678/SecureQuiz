@@ -1,6 +1,6 @@
 package Request;
 import java.io.Serializable ;
-
+import Constants.reqEnum;
 
 public class SubjectListFetchRequestTeacher implements Serializable{
     private  int teacherid;
@@ -27,9 +27,9 @@ public class SubjectListFetchRequestTeacher implements Serializable{
      * @return
 
      */
-  /*  @Override
+    @Override
     public String toString(){
+        return ""+reqEnum.SubjectListFetchRequestTeacher;
 
-
-    }*/
+    }
 }

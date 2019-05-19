@@ -1,6 +1,7 @@
 package Constants;
 
 import Request.LoginRequest;
+import Request.QuestionFetchRequest;
 import Request.SignupRequest;
 
 public enum reqEnum {
@@ -15,7 +16,9 @@ public enum reqEnum {
     QuizListFetchRequestStudent("09"),
     ScoreFetchRequest("10"),
     QuizResponseRequest("11"),
-    RankFetchRequest("12");
+    RankFetchRequest("12"),
+    QuestionFetchRequest("13"),
+    QuestionAddRequest("14");
 
 
 
