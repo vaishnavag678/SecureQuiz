@@ -4,25 +4,26 @@ import java.io.Serializable ;
 import java.util.*;
 
 import Constants.reqEnum;
+import ServerClasses.Subid;
+import ServerClasses.Teacherid;
 import javafx.util.Pair;
 
 public class SubjectAddRequestStudent implements  Serializable {
-    ArrayList< Pair<Integer,Integer>> v = new ArrayList<Pair<Integer,Integer>>(1000);
+    ArrayList<Subid> subid = new ArrayList<>(1000);
+    //ArrayList<Teacherid> teacherid = new ArrayList<>(1000);
     private int userid;
 
-    public SubjectAddRequestStudent(ArrayList<Pair<Integer, Integer>> v, int userid) {
-        this.v = v;
+    public SubjectAddRequestStudent(ArrayList<Subid> subid, int userid) {
+        this.subid = subid;
         this.userid = userid;
     }
 
-    public ArrayList<Pair<Integer, Integer>> getV() {
-        return v;
+    public ArrayList<Subid> getSubid() {
+        return subid;
     }
 
-
-
-    public void setV(ArrayList<Pair<Integer, Integer>> v) {
-        this.v = v;
+    public void setSubid(ArrayList<Subid> subid) {
+        this.subid = subid;
     }
 
     public int getUserid() {
