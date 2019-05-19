@@ -7,38 +7,34 @@ import java.util.ArrayList;
 
 import Database.DataBaseLoader;
 import Request.*;
+import javafx.util.Pair;
+
 public class Server {
     public static  DataBaseLoader db = new DataBaseLoader();
     public static void main(String args[])
     {
         ServerSocket serverSocket=null;
+    /*
+        //Testing RankFetch
+        ArrayList<Pair<Integer,Integer>> list = new ArrayList<>();
+        list.add(new Pair<>(9,1));
+        list.add(new Pair<>(10,1));
+        list.add(new Pair<>(11,1));
+        list.add(new Pair<>(12,1));
+        QuizResponseRequest req = new QuizResponseRequest(1,4,1,list,16);
+        System.out.println(QuizResponse.saveResponse(req));
 
-        /*
-        //Testing QuizListFetch Student
 
-        QuizListFetchRequestStudent req = new QuizListFetchRequestStudent(1,2);
-        ArrayList<Quiz> Qlist = QuizListFetchStudent.quizFetch(req);
-        for(Quiz q : Qlist)
-        {
-            System.out.println(" "+q.getQuizName()+" "+q.getDuration() + " "+q.getMaxMarks()+" "+q.getQid());
-        }
+        ScoreFetchRequest r = new ScoreFetchRequest(20,1);
+        System.out.println(ScoreFetch.scoreFetch(r));
         */
-        /*
-            //Testing QuizListFEtch Teacher
-        QuizListFetchRequestTeacher req = new QuizListFetchRequestTeacher(2,3);
-        ArrayList<Quiz> Qlist = QuizListFetchTeacher.quizFetch(req);
-        for(Quiz q : Qlist)
-        {
-            System.out.println(" "+q.getQuizName()+" "+q.getDuration() + " "+q.getMaxMarks()+" "+q.getQid());
-        }
-         */
 
         try {
             serverSocket = new ServerSocket(6963);
         }
         catch (Exception ex)
         {
-            System.out.println("Exception Occured");
+            ex.printStackTrace();
         }
         while(true)
         {

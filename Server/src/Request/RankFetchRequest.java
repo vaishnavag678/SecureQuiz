@@ -9,29 +9,32 @@ import javafx.util.Pair;
 
 public class RankFetchRequest implements Serializable {
 
-    private String studentid;
-    private String quizid;
+    int studentId,quizId;
 
-    public RankFetchRequest(String studentid, String quizid) {
-        this.studentid = studentid;
-        this.quizid = quizid;
+    public RankFetchRequest() {
     }
 
-    public String getStudentid() {
-        return studentid;
+    public RankFetchRequest(int studentId, int quizId) {
+        this.studentId = studentId;
+        this.quizId = quizId;
     }
 
-    public void setStudentid(String studentid) {
-        this.studentid = studentid;
+    public int getStudentId() {
+        return studentId;
     }
 
-    public String getQuizid() {
-        return quizid;
+    public void setStudentId(int studentId) {
+        this.studentId = studentId;
     }
 
-    public void setQuizid(String quizid) {
-        this.quizid = quizid;
+    public int getQuizId() {
+        return quizId;
     }
+
+    public void setQuizId(int quizId) {
+        this.quizId = quizId;
+    }
+
     @Override
     public String toString(){
         return "" + reqEnum.RankFetchRequest;

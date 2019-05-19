@@ -1,9 +1,10 @@
 package ServerClasses;
 
+import java.io.Serializable;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class Quiz {
+public class Quiz implements Serializable {
     private int duration,qid,maxMarks;
     String QuizName;
 
