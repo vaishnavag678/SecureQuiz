@@ -15,24 +15,16 @@ public class Server {
     {
         ServerSocket serverSocket=null;
     /*
-        //Testing RankFetch
-        ArrayList<Pair<Integer,Integer>> list = new ArrayList<>();
-        list.add(new Pair<>(9,1));
-        list.add(new Pair<>(10,1));
-        list.add(new Pair<>(11,1));
-        list.add(new Pair<>(12,1));
-        QuizResponseRequest req = new QuizResponseRequest(1,4,1,list,16);
-        System.out.println(QuizResponse.saveResponse(req));
+        //TYesting Student Subject fetch
+        SubjectListFetchRequestStudent req = new SubjectListFetchRequestStudent(2);
+        ArrayList<Subid> list = SubjectListFetchStudent.fetchSubject(req);
+        for(Subid u : list)
+        {
+            System.out.println(""+u.getStudentid()+" "+u.getSubid()+" "+u.getTeacherid());
+        }
 
 
-        ScoreFetchRequest r = new ScoreFetchRequest(20,1);
-        System.out.println(ScoreFetch.scoreFetch(r));
-        */
-    /*
-    //Testing QuizAdd
-        QuizAddRequest req = new QuizAddRequest(120,120,2,1,1,"Test","Test Sub");
-        System.out.println(QuizAdd.quizAdd(req));
-        */
+     */
         try {
             serverSocket = new ServerSocket(6963);
         }

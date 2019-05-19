@@ -13,11 +13,11 @@ public class Subid implements Serializable {
         this.studentid = studentid;
     }
 
-    public Subid(ResultSet rs) throws SQLException {
+    public Subid(ResultSet rs)  {
         try {
             this.subid = rs.getInt(3);
             this.teacherid = rs.getInt(2);
-            this.studentid = rs.getInt(3);
+            this.studentid = rs.getInt(1); //yha galat tha column index 3 kar  tha
         }catch (SQLException e) {
             e.printStackTrace();
         }
