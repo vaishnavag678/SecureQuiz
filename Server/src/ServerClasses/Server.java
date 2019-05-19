@@ -25,6 +25,25 @@ public class Server {
 
 
      */
+    /*
+    //Testing Teacher Subject Fetch
+        SubjectListFetchRequestTeacher req = new SubjectListFetchRequestTeacher(2);
+        ArrayList<Integer> list = SubjectListFetchTeacher.fetchSubject(req);
+        for(Integer u : list)
+        {
+            System.out.println(""+u);
+        }
+
+     */
+    /*
+    //Testing SubjectAddStudent
+        ArrayList<Subid> list = new ArrayList<>();
+        for(int i=0;i<2;i++)
+            list.add(new Subid(i+100,i+200,3));
+        SubjectAddRequestStudent req = new SubjectAddRequestStudent(list,3);
+        System.out.println(SubjectAddStudent.subjectAddStudent(req));
+       
+     */
         try {
             serverSocket = new ServerSocket(6963);
         }

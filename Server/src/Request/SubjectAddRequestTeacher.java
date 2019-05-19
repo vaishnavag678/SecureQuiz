@@ -5,15 +5,18 @@ import java.io.Serializable ;
 import java.util.*;
 
 import Constants.reqEnum;
-import javafx.util.Pair;
+
+
 public class SubjectAddRequestTeacher implements Serializable {
 
     private int teacherid;
-    ArrayList<Integer>  id=new ArrayList<Integer>(1000);
+    ArrayList<Integer>  id;
 
     public SubjectAddRequestTeacher(int teacherid, ArrayList<Integer> id) {
+        this.id = new ArrayList<>();
+        for(Integer u : id)
+            this.id.add(u);
         this.teacherid = teacherid;
-        this.id = id;
     }
 
     public SubjectAddRequestTeacher() {
@@ -32,7 +35,9 @@ public class SubjectAddRequestTeacher implements Serializable {
     }
 
     public void setId(ArrayList<Integer> id) {
-        this.id = id;
+        this.id = new ArrayList<>();
+        for(Integer u : id)
+            this.id.add(u);
     }
 
     @Override
