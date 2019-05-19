@@ -3,11 +3,8 @@ package ServerClasses;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.ArrayList;
 
 import Database.DataBaseLoader;
-import Request.*;
-import javafx.util.Pair;
 
 public class Server {
     public static  DataBaseLoader db = new DataBaseLoader();
@@ -42,8 +39,9 @@ public class Server {
             list.add(new Subid(i+100,i+200,3));
         SubjectAddRequestStudent req = new SubjectAddRequestStudent(list,3);
         System.out.println(SubjectAddStudent.subjectAddStudent(req));
-       
+
      */
+
         try {
             serverSocket = new ServerSocket(6963);
         }
