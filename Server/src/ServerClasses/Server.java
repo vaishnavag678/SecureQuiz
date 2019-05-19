@@ -28,7 +28,11 @@ public class Server {
         ScoreFetchRequest r = new ScoreFetchRequest(20,1);
         System.out.println(ScoreFetch.scoreFetch(r));
         */
-
+    /*
+    //Testing QuizAdd
+        QuizAddRequest req = new QuizAddRequest(120,120,2,1,1,"Test","Test Sub");
+        System.out.println(QuizAdd.quizAdd(req));
+        */
         try {
             serverSocket = new ServerSocket(6963);
         }
