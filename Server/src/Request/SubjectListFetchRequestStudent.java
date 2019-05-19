@@ -13,6 +13,9 @@ public class SubjectListFetchRequestStudent implements Serializable {
         return studentid;
     }
 
+    public SubjectListFetchRequestStudent() {
+    }
+
     public void setStudentid(int studentid) {
         this.studentid = studentid;
     }
