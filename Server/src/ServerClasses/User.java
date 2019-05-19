@@ -2,6 +2,7 @@ package ServerClasses;
 
 import java.io.Serializable ;
 import Constants.LoginStatus;
+
 public class User implements Serializable {
 
 

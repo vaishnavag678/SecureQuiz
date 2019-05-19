@@ -2,13 +2,14 @@ package ServerClasses;
 import Request.QuestionAddRequest;
 import sun.plugin2.main.client.DisconnectedExecutionContext;
 
+import java.io.Serializable;
 import java.rmi.activation.ActivationGroup_Stub;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.util.ArrayList;
 import Constants.BinaryStatus;
 
-public class QuestionAdd {
+public class QuestionAdd implements Serializable {
     private static String query="INSERT INTO `question`( `QuestionField`, `Quizid`, `Option1`, `Option2`, `Option3`, `Option4`, `AnsKey`, `Type`) VALUES (?,?,?,?,?,?,?,?)";
     private static Connection con = Server.db.getConnection();
     private static PreparedStatement st;

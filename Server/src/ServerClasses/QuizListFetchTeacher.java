@@ -1,5 +1,6 @@
 package ServerClasses;
 
+import java.io.Serializable;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -7,7 +8,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import Request.QuizListFetchRequestTeacher;
 
-public class QuizListFetchTeacher {
+public class QuizListFetchTeacher implements Serializable {
     private static Connection con = Server.db.getConnection();
     private static String Query1 = "SELECT * FROM `teacher_subject_quiz` WHERE `Teacherid`=? AND Subid=?";
     private static String Query2 = "SELECT * FROM `quiz` WHERE `Quizid`=?";

@@ -41,7 +41,6 @@ public class SubjectAddStudent implements Serializable{
         try{
             st = con.prepareStatement(query);
             st.setInt(1,u.getStudentid());
-
             st.setInt(2,u.getTeacherid());
             st.setInt(3,u.getSubid());
            // st.setInt(2,u.getTeacherid)

@@ -2,12 +2,13 @@ package ServerClasses;
 import Constants.BinaryStatus;
 import Request.RankFetchRequest;
 
+import java.io.Serializable;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class RankFetch {
+public class RankFetch implements Serializable {
     private static Connection con = Server.db.getConnection();
     private static String query = "SELECT Studentid from `student_quiz_marks` WHERE Quizid=? AND Flag=1 ORDER BY Marks DESC";
     private  static PreparedStatement st;

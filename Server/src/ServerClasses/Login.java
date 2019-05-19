@@ -8,7 +8,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class Login {
+public class Login implements Serializable{
     private static String query;
    // private static String query2;
     private static Connection con;

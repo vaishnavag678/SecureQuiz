@@ -3,12 +3,13 @@ package ServerClasses;
 import Constants.BinaryStatus;
 import Request.ScoreFetchRequest;
 
+import java.io.Serializable;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 
-public class ScoreFetch  {
+public class ScoreFetch implements Serializable {
     private static Connection con = Server.db.getConnection();
     private static String query = "SELECT Marks from `student_quiz_marks` WHERE Quizid=? AND Flag=1 AND Studentid=?";
     private  static PreparedStatement st;

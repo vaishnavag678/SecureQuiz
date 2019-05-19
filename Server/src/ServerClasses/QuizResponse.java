@@ -3,11 +3,12 @@ import Request.QuizResponseRequest;
 import Constants.BinaryStatus;
 import javafx.util.Pair;
 
+import java.io.Serializable;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-public class QuizResponse {
+public class QuizResponse implements Serializable {
     private static Connection con = Server.db.getConnection(); //This can be improved ,if time permits
     private static PreparedStatement st1,st2;
     private static String query1 = "SELECT `AnsKey` FROM `question` WHERE  `Questionid`=?";

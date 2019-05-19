@@ -1,12 +1,13 @@
 package ServerClasses;
 import Request.QuestionFetchRequest;
 
+import java.io.Serializable;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 
-public class QuestionFetch {
+public class QuestionFetch implements Serializable {
     private static Connection con = Server.db.getConnection();
     private static String Query="SELECT * FROM `question` WHERE `Quizid`=?";
     private static PreparedStatement st;

@@ -3,6 +3,8 @@ package ServerClasses;
 import java.io.Serializable;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.*;
+
 
 public class Question implements Serializable {
     private int questionId,quizId,type, ansKey;
@@ -13,7 +15,9 @@ public class Question implements Serializable {
         this.quizId = quizId;
         this.type = type;
         this.ansKey = ansKey;
+
         QuestionField = questionField;
+
         this.option1 = option1;
         this.option2 = option2;
         this.option3 = option3;
@@ -42,50 +46,62 @@ public class Question implements Serializable {
 
 
     public int getQuestionId() {
+
         return questionId;
     }
 
     public void setQuestionId(int questionId) {
+
         this.questionId = questionId;
     }
 
     public int getQuizId() {
+
         return quizId;
     }
 
     public void setQuizId(int quizId) {
+
         this.quizId = quizId;
     }
 
     public int getType() {
+
         return type;
     }
 
     public void setType(int type) {
+
         this.type = type;
     }
 
     public int getAnsKey() {
+
         return ansKey;
     }
 
     public void setAnsKey(int ansKey) {
+
         this.ansKey = ansKey;
     }
 
     public String getQuestionField() {
+
         return QuestionField;
     }
 
     public void setQuestionField(String questionField) {
+
         QuestionField = questionField;
     }
 
     public String getOption1() {
+
         return option1;
     }
 
     public void setOption1(String option1) {
+
         this.option1 = option1;
     }
 
@@ -94,14 +110,17 @@ public class Question implements Serializable {
     }
 
     public void setOption2(String option2) {
+
         this.option2 = option2;
     }
 
     public String getOption3() {
+
         return option3;
     }
 
     public void setOption3(String option3) {
+
         this.option3 = option3;
     }
 

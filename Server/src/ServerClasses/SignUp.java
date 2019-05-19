@@ -10,6 +10,7 @@ public class SignUp {
     private static Connection con = Server.db.getConnection();
     private static PreparedStatement st = null;
     private static String check =  "SELECT * FROM users WHERE Email=?";
+
     public static String signUp(SignupRequest req)
     {
         try {
