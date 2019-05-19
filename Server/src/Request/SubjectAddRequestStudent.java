@@ -9,12 +9,15 @@ import ServerClasses.Teacherid;
 import javafx.util.Pair;
 
 public class SubjectAddRequestStudent implements  Serializable {
-    ArrayList<Subid> subid = new ArrayList<>(1000);
+    ArrayList<Subid> subid;
     //ArrayList<Teacherid> teacherid = new ArrayList<>(1000);
     private int userid;
 
     public SubjectAddRequestStudent(ArrayList<Subid> subid, int userid) {
-        this.subid = subid;
+        this.subid = new ArrayList<>();
+        for(Subid u : subid)
+            this.subid.add(u);
+
         this.userid = userid;
     }
 
@@ -23,7 +26,9 @@ public class SubjectAddRequestStudent implements  Serializable {
     }
 
     public void setSubid(ArrayList<Subid> subid) {
-        this.subid = subid;
+        this.subid = new ArrayList<>();
+        for(Subid u : subid)
+            this.subid.add(u);
     }
 
     public int getUserid() {

@@ -15,20 +15,35 @@ public class Server {
     {
         ServerSocket serverSocket=null;
     /*
-        //Testing RankFetch
-        ArrayList<Pair<Integer,Integer>> list = new ArrayList<>();
-        list.add(new Pair<>(9,1));
-        list.add(new Pair<>(10,1));
-        list.add(new Pair<>(11,1));
-        list.add(new Pair<>(12,1));
-        QuizResponseRequest req = new QuizResponseRequest(1,4,1,list,16);
-        System.out.println(QuizResponse.saveResponse(req));
+        //TYesting Student Subject fetch
+        SubjectListFetchRequestStudent req = new SubjectListFetchRequestStudent(2);
+        ArrayList<Subid> list = SubjectListFetchStudent.fetchSubject(req);
+        for(Subid u : list)
+        {
+            System.out.println(""+u.getStudentid()+" "+u.getSubid()+" "+u.getTeacherid());
+        }
 
 
-        ScoreFetchRequest r = new ScoreFetchRequest(20,1);
-        System.out.println(ScoreFetch.scoreFetch(r));
-        */
+     */
+    /*
+    //Testing Teacher Subject Fetch
+        SubjectListFetchRequestTeacher req = new SubjectListFetchRequestTeacher(2);
+        ArrayList<Integer> list = SubjectListFetchTeacher.fetchSubject(req);
+        for(Integer u : list)
+        {
+            System.out.println(""+u);
+        }
 
+     */
+    /*
+    //Testing SubjectAddStudent
+        ArrayList<Subid> list = new ArrayList<>();
+        for(int i=0;i<2;i++)
+            list.add(new Subid(i+100,i+200,3));
+        SubjectAddRequestStudent req = new SubjectAddRequestStudent(list,3);
+        System.out.println(SubjectAddStudent.subjectAddStudent(req));
+       
+     */
         try {
             serverSocket = new ServerSocket(6963);
         }

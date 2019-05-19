@@ -10,9 +10,10 @@ import Constants.reqEnum;
 import Request.SubjectAddRequestStudent;
 
 
-public class SubjectAddStudent implements Serializable{
+public class
+SubjectAddStudent implements Serializable{
 
-    private static  String query="INSERT INTO `student_teacher_subject` (`Studentid`,`Teacherid`,`Subid `)VALUES(?,?,?)";
+    private static  String query="INSERT INTO `student_teacher_subject` (`Studentid`,`Teacherid`,`Subid`) VALUES(?,?,?)";
 
     private static Connection con = Server.db.getConnection();
     private static PreparedStatement st;
