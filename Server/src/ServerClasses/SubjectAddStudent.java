@@ -10,8 +10,7 @@ import Constants.reqEnum;
 import Request.SubjectAddRequestStudent;
 
 
-public class
-SubjectAddStudent implements Serializable{
+public class SubjectAddStudent implements Serializable{
 
     private static  String query="INSERT INTO `student_teacher_subject` (`Studentid`,`Teacherid`,`Subid`) VALUES(?,?,?)";
 
@@ -21,7 +20,7 @@ SubjectAddStudent implements Serializable{
 
     public static  String subjectAddStudent(SubjectAddRequestStudent req)
     {
-        ArrayList<Subid> list1 = req.getSubid();
+        ArrayList<Subid> list1 = req.getSubid(); // ye request se pura array return ho raha yaad rakhna :)
         //ArrayList<Teacherid>list2=req.getTeacherid();
         try {
             for(Subid u : list1)
