@@ -3,7 +3,8 @@ package ServerClasses;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
-
+import java.util.*;
+import Request.SubjectAddRequestTeacher;
 import Database.DataBaseLoader;
 
 public class Server {
@@ -41,7 +42,12 @@ public class Server {
         System.out.println(SubjectAddStudent.subjectAddStudent(req));
 
      */
-
+      /**  ArrayList<Teacherid> list = new ArrayList<>();
+        for(int i=0;i<5;i++)
+            list.add(new Teacherid(i+100,i+200));
+        SubjectAddRequestTeacher req = new SubjectAddRequestTeacher(list,3);
+        System.out.println(SubjectAddTeacher.SubjectAddteacher(req));
+       ***/
         try {
             serverSocket = new ServerSocket(6963);
         }
