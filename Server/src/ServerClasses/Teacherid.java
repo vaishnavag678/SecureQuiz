@@ -3,6 +3,8 @@ import java.io.Serializable;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.io.Serializable;
+import Request.*;
+
 
 public class Teacherid implements Serializable {
 
@@ -20,8 +22,9 @@ public class Teacherid implements Serializable {
     public Teacherid(ResultSet rs)  {
 
         try {
-            this.subid = rs.getInt(2);
             this.teacherid=rs.getInt(1);
+            this.subid = rs.getInt(2);
+
 
         }catch (SQLException e) {
             e.printStackTrace();
@@ -29,18 +32,22 @@ public class Teacherid implements Serializable {
     }
 
     public int getTeacherid() {
+
         return teacherid;
     }
 
     public void setTeacherid(int teacherid) {
+
         this.teacherid = teacherid;
     }
 
     public int getSubid() {
+
         return subid;
     }
 
     public void setSubid(int subid) {
+
         this.subid = subid;
     }
 }
