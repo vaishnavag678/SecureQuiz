@@ -13,10 +13,8 @@ import java.sql.Statement;
 public class DataBaseLoader {
 
 
-    static String user = "root";//user root by default
-   // static String password = "" +
-     //       "";//password for mysql connectio
-   static String password="qwerty123";
+    static String user = "root";
+   static String password="";
     private Connection connection;
     private Statement st;
 

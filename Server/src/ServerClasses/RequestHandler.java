@@ -69,7 +69,7 @@ public class RequestHandler extends Thread
                 if(identifier.equals(String.valueOf(reqEnum.SubjectAddRequestTeacher)))
                 {
                     SubjectAddRequestTeacher req = (SubjectAddRequestTeacher ) inReq;
-                    //oos.writeObject(Login.userLogin(req)); To be added
+                    oos.writeObject(SubjectAddTeacher.SubjectAddteacher(req)); 
                     oos.flush();
                 }
                 if(identifier.equals(String.valueOf(reqEnum.QuizAddRequest)))
