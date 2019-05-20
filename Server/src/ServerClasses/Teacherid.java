@@ -6,21 +6,41 @@ import java.io.Serializable;
 
 public class Teacherid implements Serializable {
 
+    private int teacherid,subid;
 
-    private int teacherid;
-
-    public Teacherid(int teacherid) {
-
+    public Teacherid(int teacherid, int subid) {
         this.teacherid = teacherid;
+        this.subid = subid;
+    }
+
+    /****************teacherid class contains subid field and teacherid field
+     you can handle which teacher added which subject  at a time :)
+     * @param rs
+     */
+    public Teacherid(ResultSet rs)  {
+
+        try {
+            this.subid = rs.getInt(2);
+            this.teacherid=rs.getInt(1);
+
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     public int getTeacherid() {
-
         return teacherid;
     }
 
     public void setTeacherid(int teacherid) {
-
         this.teacherid = teacherid;
+    }
+
+    public int getSubid() {
+        return subid;
+    }
+
+    public void setSubid(int subid) {
+        this.subid = subid;
     }
 }

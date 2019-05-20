@@ -14,8 +14,9 @@ public class DataBaseLoader {
 
 
     static String user = "root";//user root by default
-    static String password = "" +
-            "";//password for mysql connectio
+   // static String password = "" +
+     //       "";//password for mysql connectio
+   static String password="qwerty123";
     private Connection connection;
     private Statement st;
 
