@@ -8,11 +8,15 @@ import java.io.Serializable;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.util.ArrayList;
+import java.util.*;
+
 
 public class SubjectAddTeacher implements Serializable {
         //private int teacherid;
         //private int subid;
         private static  String query="INSERT INTO `teacher_subject` (`Teacherid`,`Subid`) VALUES(?,?)";
+        /***query added to your database****/
+
         private static Connection con = Server.db.getConnection();
         private static PreparedStatement st;
 
