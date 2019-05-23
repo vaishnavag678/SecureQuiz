@@ -69,7 +69,7 @@ public class RequestHandler extends Thread
                 if(identifier.equals(String.valueOf(reqEnum.SubjectAddRequestTeacher)))
                 {
                     SubjectAddRequestTeacher req = (SubjectAddRequestTeacher ) inReq;
-                    oos.writeObject(SubjectAddTeacher.SubjectAddteacher(req)); 
+                    oos.writeObject(SubjectAddTeacher.SubjectAddteacher(req));
                     oos.flush();
                 }
                 if(identifier.equals(String.valueOf(reqEnum.QuizAddRequest)))
@@ -139,7 +139,10 @@ public class RequestHandler extends Thread
             }
             catch (Exception e){
                 e.printStackTrace();
+                System.out.println(client + " Disconnected");
+                break;
             }
+
         }
     }
 
