@@ -15,6 +15,7 @@ import ServerClasses.User;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import ServerClasses.HashGenerator;
 
 public class login {
 
@@ -59,7 +60,7 @@ public class login {
     public void loginButonClicked()
     {
 
-        LoginRequest req = new LoginRequest(Email.getText().trim(),password.getText().trim());
+        LoginRequest req = new LoginRequest(Email.getText().trim(),HashGenerator.getHash(password.getText().trim()));
         try {
             oos.writeObject(req);
             oos.flush();

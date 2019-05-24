@@ -2,6 +2,7 @@ package Controllers;
 
 import GUI.Main;
 import Request.SignupRequest;
+import ServerClasses.HashGenerator;
 import ServerClasses.User;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -57,7 +58,7 @@ public class signup {
     public void signUpButtonClicked()
     {
         System.out.println("SignUp Button Clicked...");
-        SignupRequest req = new SignupRequest(fname.getText().trim(),lname.getText().trim(),Email.getText().trim(),password.getText().trim());
+        SignupRequest req = new SignupRequest(fname.getText().toUpperCase().trim(),lname.getText().trim().toUpperCase(),Email.getText().trim(), HashGenerator.getHash(password.getText().trim()));
         try {
             oos.writeObject(req);
             oos.flush();
