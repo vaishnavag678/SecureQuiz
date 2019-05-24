@@ -4,9 +4,7 @@ import java.io.Serializable ;
 import java.util.*;
 
 import Constants.reqEnum;
-import MainClasses.Subid;
-import MainClasses.Teacherid;
-import javafx.util.Pair;
+import ServerClasses.Subid;
 
 public class SubjectAddRequestStudent implements  Serializable {
     ArrayList<Subid> subid;

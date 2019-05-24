@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 import Constants.reqEnum;
-import MainClasses.Question;
+import ServerClasses.Question;
 
 public class QuestionAddRequest implements Serializable {
     private ArrayList<Question> questions;

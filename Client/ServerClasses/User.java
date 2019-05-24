@@ -1,4 +1,4 @@
-package MainClasses;
+package ServerClasses;
 
 import Constants.LoginStatus;
 

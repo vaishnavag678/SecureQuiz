@@ -5,7 +5,7 @@ import java.io.Serializable ;
 import java.util.*;
 
 import Constants.reqEnum;
-import MainClasses.Teacherid;
+import ServerClasses.Teacherid;
 
 
 public class SubjectAddRequestTeacher implements Serializable {

@@ -1,4 +1,4 @@
-package MainClasses;
+package ServerClasses;
 
 import java.io.Serializable;
 import java.sql.ResultSet;
