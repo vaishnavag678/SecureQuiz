@@ -1,5 +1,7 @@
 package GUI;
 
+import ServerClasses.Quiz;
+import ServerClasses.User;
 import com.sun.xml.internal.bind.v2.runtime.unmarshaller.Loader;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -16,10 +18,15 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
 
+
 public class Main extends Application {
     public static Socket socket;
     public static ObjectOutputStream oos;
     public static ObjectInputStream ois;
+    public static User user;
+    public static boolean isLogin=false;
+    public static Quiz studentQuiz;
+    public static Stage Pstage;
     public static void main(String[] args) {
         try
         {
@@ -42,6 +49,8 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) {
+
+        this.Pstage=primaryStage;
         Parent root=null;
         try {
              root= FXMLLoader.load(getClass().getResource("index.fxml"));

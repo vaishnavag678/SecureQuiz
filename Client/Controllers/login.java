@@ -1,5 +1,6 @@
 package Controllers;
 
+import Constants.LoginStatus;
 import GUI.Main;
 import Request.LoginRequest;
 import javafx.fxml.FXML;
@@ -66,6 +67,21 @@ public class login {
             oos.flush();
             user = (User) ois.readObject();
             label.setText(""+user.getUSER_LOGIN_STATUS());
+            if(user.getUSER_LOGIN_STATUS().equals(String.valueOf(LoginStatus.SUCCESS)))
+            {
+                Main.user = user;
+                Main.isLogin =true;
+                Parent root;
+                Stage primarystage = (Stage) LoginButton.getScene().getWindow();
+                if(user.getType()==0)
+                    root = FXMLLoader.load(getClass().getResource("../GUI/studentDashboard.fxml"));
+                else
+                    root = FXMLLoader.load(getClass().getResource("../GUI/teacherDashboard.fxml"));
+                primarystage.setTitle("DashBoard");
+                primarystage.setScene(new Scene(root,800,600));
+                primarystage.show();
+
+            }
 
         }
         catch (Exception e)
