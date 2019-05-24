@@ -20,8 +20,11 @@ public class RequestHandler extends Thread
         try {
 
             this.socket = socket;
-            this.ois = new ObjectInputStream(socket.getInputStream());
+            //Reversing the order causes Deadlock and the project freezes
+            //https://stackoverflow.com/questions/54095782/the-program-stops-when-the-objectinputstream-object-is-created
             this.oos = new ObjectOutputStream(socket.getOutputStream());
+            this.ois = new ObjectInputStream(socket.getInputStream());
+
         }
         catch (IOException e)
         {
