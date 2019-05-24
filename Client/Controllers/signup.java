@@ -1,7 +1,8 @@
 package Controllers;
 
 import GUI.Main;
-import Request.LoginRequest;
+import Request.SignupRequest;
+import ServerClasses.User;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -11,22 +12,21 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import ServerClasses.User;
+
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
-public class login {
+public class signup {
 
-    private ObjectInputStream ois=Main.ois;
+    private ObjectInputStream ois= Main.ois;
     private ObjectOutputStream oos=Main.oos;
-    private User user;
 
     @FXML
-    Button LoginButton,BackButton;
+    Button SignUpButton,BackButton;
 
     @FXML
-    TextField Email;
+    TextField fname,lname,Email;
 
     @FXML
     PasswordField password;
@@ -34,7 +34,7 @@ public class login {
     @FXML
     Label label;
 
-    @FXML
+
     public  void backButtonClicked()
     {
 
@@ -54,18 +54,15 @@ public class login {
 
     }
 
-
-    @FXML
-    public void loginButonClicked()
+    public void signUpButtonClicked()
     {
-
-        LoginRequest req = new LoginRequest(Email.getText().trim(),password.getText().trim());
+        System.out.println("SignUp Button Clicked...");
+        SignupRequest req = new SignupRequest(fname.getText().trim(),lname.getText().trim(),Email.getText().trim(),password.getText().trim());
         try {
             oos.writeObject(req);
             oos.flush();
-            user = (User) ois.readObject();
-            label.setText(""+user.getUSER_LOGIN_STATUS());
-
+            String status = (String) ois.readObject();
+            label.setText(String.valueOf(status));
         }
         catch (Exception e)
         {
@@ -73,7 +70,6 @@ public class login {
             label.setText("Try Again");
             e.printStackTrace();
         }
-
     }
 
 }

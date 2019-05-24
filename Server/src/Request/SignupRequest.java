@@ -5,7 +5,7 @@ import Constants.reqEnum;
 
 import java.io.Serializable ;
 
-public class SignupRequest {
+public class SignupRequest implements Serializable{
 
     private String fname;
     private String lname;

@@ -35,5 +35,17 @@ public  class index  {
     public void  signUpButtnClicked()
     {
         System.out.println("SignUp Window requested...");
+        Stage stage = (Stage) LoginButton.getScene().getWindow();
+
+        Parent root=null;
+        try {
+            root = FXMLLoader.load(getClass().getResource("../GUI/signup.fxml"));
+
+            stage.setScene(new Scene(root, 800, 600));
+            stage.setTitle("SignUp");
+        } catch (IOException e) {
+            //System.out.println("Hre");
+            e.printStackTrace();
+        }
     }
 }
