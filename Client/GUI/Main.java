@@ -2,14 +2,10 @@ package GUI;
 
 import ServerClasses.Quiz;
 import ServerClasses.User;
-import com.sun.xml.internal.bind.v2.runtime.unmarshaller.Loader;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Cursor;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.layout.VBox;
-import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
@@ -26,6 +22,7 @@ public class Main extends Application {
     public static User user;
     public static boolean isLogin=false;
     public static Quiz studentQuiz;
+    public static Quiz teacherQuiz;
     public static Stage Pstage;
     public static int quizDuration;
     public static int quizSubId;

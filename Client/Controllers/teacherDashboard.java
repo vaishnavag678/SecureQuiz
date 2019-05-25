@@ -2,7 +2,10 @@ package Controllers;
 
 import Constants.BinaryStatus;
 import GUI.Main;
-import Request.*;
+import Request.DeactivateQuizRequest;
+import Request.QuizListFetchRequestTeacher;
+import Request.SubjectAddRequestTeacher;
+import Request.SubjectListFetchRequestTeacher;
 import ServerClasses.Quiz;
 import ServerClasses.Teacherid;
 import ServerClasses.User;
@@ -217,7 +220,7 @@ public class teacherDashboard {
             Main.Pstage.setScene(new Scene(root,800,600));
             Main.Pstage.show();
 
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
             alert = new Alert(Alert.AlertType.ERROR,"Try Again.",ButtonType.OK);
             alert.showAndWait();
