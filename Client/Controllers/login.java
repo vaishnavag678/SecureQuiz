@@ -69,6 +69,7 @@ public class login {
             label.setText(""+user.getUSER_LOGIN_STATUS());
             if(user.getUSER_LOGIN_STATUS().equals(String.valueOf(LoginStatus.SUCCESS)))
             {
+                System.out.println("User Login");
                 Main.user = user;
                 Main.isLogin =true;
                 Parent root;

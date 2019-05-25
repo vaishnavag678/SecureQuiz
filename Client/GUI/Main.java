@@ -27,6 +27,10 @@ public class Main extends Application {
     public static boolean isLogin=false;
     public static Quiz studentQuiz;
     public static Stage Pstage;
+    public static int quizDuration;
+    public static int quizSubId;
+    public static int quizQuesno;
+
     public static void main(String[] args) {
         try
         {

@@ -46,17 +46,17 @@ public class studentDashboard
         private ArrayList<Pair<Quiz,Button> > subjects= new  ArrayList<>();//To create buttons dynamically
 
 
-        @FXML
-        public void initialize()
-        {
-                fnameLabel.setText(student.getFname());
-                lnameLabel.setText(student.getLname());
-                welcomeLabel.setText("Welcome, "+student.getFname()+" "+student.getLname());
-                emailLabel.setText(student.getEmail());
-                setSubjectList();
+    @FXML
+    public void initialize()
+    {
+        fnameLabel.setText(student.getFname());
+        lnameLabel.setText(student.getLname());
+        welcomeLabel.setText("Welcome, "+student.getFname()+" "+student.getLname());
+        emailLabel.setText(student.getEmail());
+        setSubjectList();
 
 
-        }
+    }
 
         public void setSubjectList()
         {
@@ -133,7 +133,6 @@ public class studentDashboard
             ArrayList<Subid> toadd = new ArrayList<>();
             for(String u : str)
             {
-                System.out.println(u);
                 //now get subid and teachid
                 String[] add = u.split(",");
                 if(add.length!=2)
@@ -168,6 +167,7 @@ public class studentDashboard
                     e.printStackTrace();
                 }
             }
+            addSubjectTextField.setText("");
             setSubjectList();
         }
 
@@ -177,8 +177,9 @@ public class studentDashboard
             Main.isLogin=false;
             Main.user=null;
             Main.Pstage.setTitle("Secure Quiz");
-            Main.Pstage.setScene(new Scene(root,800,600));
             System.out.println("User Logout");
+            Main.Pstage.setScene(new Scene(root,800,600));
+
             Main.Pstage.show();
 
         }
