@@ -135,6 +135,12 @@ public class RequestHandler extends Thread
                     oos.writeObject(ServerClasses.QuestionAdd.questionAdd(req));
                     oos.flush();
                 }
+                if(identifier.equals(String.valueOf(reqEnum.DeactivateQuizRequest)))
+                {
+                    DeactivateQuizRequest req = (DeactivateQuizRequest) inReq;
+                    oos.writeObject(ServerClasses.DeactivateQuiz.deactivate(req));
+                    oos.flush();
+                }
 
 
 

@@ -1,8 +1,5 @@
 package Constants;
 
-import Request.LoginRequest;
-import Request.QuestionFetchRequest;
-import Request.SignupRequest;
 
 public enum reqEnum {
     LoginRequest("01"),
@@ -18,7 +15,8 @@ public enum reqEnum {
     QuizResponseRequest("11"),
     RankFetchRequest("12"),
     QuestionFetchRequest("13"),
-    QuestionAddRequest("14");
+    QuestionAddRequest("14"),
+    DeactivateQuizRequest("15");
 
 
 

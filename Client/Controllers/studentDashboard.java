@@ -10,10 +10,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.ListView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.Region;
 import javafx.scene.layout.VBox;
 
@@ -63,18 +60,23 @@ public class studentDashboard
 
         public void setSubjectList()
         {
+                subjectBox.getChildren().clear();
+                subjects.clear();
                 SubjectListFetchRequestStudent req = new SubjectListFetchRequestStudent(student.getUserid());
                 try {
                         oos.writeObject(req);
                         oos.flush();
                         ArrayList<Subid> resp =(ArrayList<Subid>) ooi.readObject();
+
                         if(resp==null)
                                 return;
                         for(Subid u : resp)
                         {
+
                                 QuizListFetchRequestStudent req1 = new QuizListFetchRequestStudent(student.getUserid(),u.getSubid());
                                 oos.writeObject(req1);
                                 ArrayList<Quiz> resp1 = (ArrayList<Quiz>) ooi.readObject();
+
                                 for(Quiz quiz : resp1)
                                 {
                                         Button btn = new Button(quiz.getQuizName());
@@ -88,18 +90,23 @@ public class studentDashboard
                                         btn.setOnAction(new EventHandler<ActionEvent>() {
                                             @Override
                                             public void handle(ActionEvent event) {
-                                                Main.studentQuiz=quiz;
-                                                quizLabel.setText(quiz.getQuizName());
+                                                Alert alert = new Alert(Alert.AlertType.CONFIRMATION,"Do you Want to start the quiz "+quiz.getQuizName() +" of Subject " + u.getSubid(),ButtonType.YES,ButtonType.NO );
+                                                alert.showAndWait();
+                                                if (alert.getResult()==ButtonType.YES)
+                                                {
+                                                    Main.studentQuiz=quiz;
+                                                    quizLabel.setText(quiz.getQuizName());
 
-                                                Parent root = null;
-                                                try {
-                                                    root = FXMLLoader.load(getClass().getResource("../GUI/quizStudent.fxml"));
-                                                    Main.Pstage.setScene(new Scene(root,800,600));
-                                                    Main.Pstage.setTitle(""+quiz.getQuizName());
-                                                } catch (IOException e) {
-                                                    e.printStackTrace();
+                                                    Parent root = null;
+                                                    try {
+                                                        root = FXMLLoader.load(getClass().getResource("../GUI/quizStudent.fxml"));
+                                                        Main.Pstage.setScene(new Scene(root,800,600));
+                                                        Main.Pstage.setTitle(""+quiz.getQuizName());
+                                                    } catch (IOException e) {
+                                                        e.printStackTrace();
+                                                    }
+
                                                 }
-
                                             }
                                         });
                                 }
