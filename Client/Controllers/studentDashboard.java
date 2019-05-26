@@ -60,6 +60,7 @@ public class studentDashboard
 
         public void setSubjectList()
         {
+                quizLabel.setText("Quizzes:: ");
                 subjectBox.getChildren().clear();
                 subjects.clear();
                 SubjectListFetchRequestStudent req = new SubjectListFetchRequestStudent(student.getUserid());
@@ -95,6 +96,7 @@ public class studentDashboard
                                                 if (alert.getResult()==ButtonType.YES)
                                                 {
                                                     Main.studentQuiz=quiz;
+                                                    Main.studentquizSubID = u.getSubid();
                                                     quizLabel.setText(quiz.getQuizName());
 
                                                     Parent root = null;

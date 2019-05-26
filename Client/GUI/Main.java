@@ -24,9 +24,10 @@ public class Main extends Application {
     public static Quiz studentQuiz;
     public static Quiz teacherQuiz;
     public static Stage Pstage;
-    public static int quizDuration;
-    public static int quizSubId;
-    public static int quizQuesno;
+    public static int quizDuration; //for teacher
+    public static int quizSubId;   //for teacher
+    public static int quizQuesno;  //for teacher
+    public static int studentquizSubID;
 
     public static void main(String[] args) {
         try

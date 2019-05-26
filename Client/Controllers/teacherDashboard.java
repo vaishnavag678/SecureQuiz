@@ -108,6 +108,7 @@ public class teacherDashboard {
 
     public void setSubjectList()
     {
+        quizLabel.setText("Quizzes:: ");
         subjectBox.getChildren().clear();
         subjects.clear();
         SubjectListFetchRequestTeacher req = new SubjectListFetchRequestTeacher(teacher.getUserid());
