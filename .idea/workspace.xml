@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a816ad05-bc48-48e2-bd86-f8a68e6a9381" name="Default Changelist" comment="Added README">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-    </list>
+    <list default="true" id="a816ad05-bc48-48e2-bd86-f8a68e6a9381" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,8 +17,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="189">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="255">
                 <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
               </first_editor>
               <second_editor />
@@ -225,7 +222,7 @@
       <workItem from="1558697995514" duration="24781000" />
       <workItem from="1558777097220" duration="23875000" />
       <workItem from="1558853188161" duration="1553000" />
-      <workItem from="1558859584530" duration="19926000" />
+      <workItem from="1558859584530" duration="19993000" />
     </task>
     <task id="LOCAL-00001" summary="Testing">
       <created>1557691851959</created>
@@ -367,15 +364,21 @@
       <option name="project" value="LOCAL" />
       <updated>1558882338160</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Added README&#10;&#10;Signed-off-by: abhi-biswas &lt;mpsabhijeet@gmail.com&gt;">
+      <created>1558882418824</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1558882418824</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99745000" />
+    <option name="totallyTimeSpent" value="99812000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2753404" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -386,7 +389,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32569557" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32569557" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39934534" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -462,7 +465,8 @@
     <MESSAGE value="Added Debug Statements." />
     <MESSAGE value="config files." />
     <MESSAGE value="Added README" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added README" />
+    <MESSAGE value="Added README&#10;&#10;Signed-off-by: abhi-biswas &lt;mpsabhijeet@gmail.com&gt;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added README&#10;&#10;Signed-off-by: abhi-biswas &lt;mpsabhijeet@gmail.com&gt;" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Client/Request/DeactivateQuizRequest.java">
@@ -933,8 +937,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="189">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="255">
             <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
           </first_editor>
           <second_editor />
