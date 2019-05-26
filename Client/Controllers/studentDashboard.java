@@ -76,6 +76,7 @@ public class studentDashboard
 
                                 QuizListFetchRequestStudent req1 = new QuizListFetchRequestStudent(student.getUserid(),u.getSubid());
                                 oos.writeObject(req1);
+                                oos.flush();
                                 ArrayList<Quiz> resp1 = (ArrayList<Quiz>) ooi.readObject();
 
                                 for(Quiz quiz : resp1)

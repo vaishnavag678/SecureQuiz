@@ -59,60 +59,70 @@ public class RequestHandler extends Thread
                 }
                 if(identifier.equals(String.valueOf(reqEnum.SignupRequest)))
                 {
+                    System.out.println(reqEnum.SignupRequest);
                     SignupRequest req = (SignupRequest) inReq;
                     oos.writeObject(SignUp.signUp(req));
                     oos.flush();
                 }
                 if(identifier.equals(String.valueOf(reqEnum.SubjectAddRequestStudent)))
                 {
+                    System.out.println(reqEnum.SubjectAddRequestStudent);
                     SubjectAddRequestStudent req = (SubjectAddRequestStudent ) inReq;
                     oos.writeObject(SubjectAddStudent.subjectAddStudent(req));
                     oos.flush();
                 }
                 if(identifier.equals(String.valueOf(reqEnum.SubjectAddRequestTeacher)))
                 {
+                    System.out.println(reqEnum.SubjectAddRequestTeacher);
                     SubjectAddRequestTeacher req = (SubjectAddRequestTeacher ) inReq;
                     oos.writeObject(SubjectAddTeacher.SubjectAddteacher(req));
                     oos.flush();
                 }
                 if(identifier.equals(String.valueOf(reqEnum.QuizAddRequest)))
                 {
+                    System.out.println(reqEnum.QuizAddRequest);
                     QuizAddRequest req = (QuizAddRequest ) inReq;
                     oos.writeObject(QuizAdd.quizAdd(req));
                     oos.flush();
                 }
                 if(identifier.equals(String.valueOf(reqEnum.SubjectListFetchRequestStudent)))
                 {
+                    System.out.println(reqEnum.SubjectListFetchRequestStudent);
                     SubjectListFetchRequestStudent req = (SubjectListFetchRequestStudent ) inReq;
                     oos.writeObject(ServerClasses.SubjectListFetchStudent.fetchSubject(req));
                     oos.flush();
                 }
                 if(identifier.equals(String.valueOf(reqEnum.SubjectListFetchRequestTeacher)))
                 {
+                    System.out.println(reqEnum.SubjectListFetchRequestTeacher);
                     SubjectListFetchRequestTeacher req = (SubjectListFetchRequestTeacher ) inReq;
                     oos.writeObject(ServerClasses.SubjectListFetchTeacher.fetchSubject(req));
                     oos.flush();
                 }
                 if(identifier.equals(String.valueOf(reqEnum.QuizListFetchRequestTeacher)))
                 {
+                    System.out.println(String.valueOf(reqEnum.QuizListFetchRequestTeacher));
                     QuizListFetchRequestTeacher req = (QuizListFetchRequestTeacher ) inReq;
                     oos.writeObject(ServerClasses.QuizListFetchTeacher.quizFetch(req));
                     oos.flush();
                 }
                 if(identifier.equals(String.valueOf(reqEnum.QuizListFetchRequestStudent)))
                 {
+                    System.out.println(reqEnum.QuizListFetchRequestStudent);
                     QuizListFetchRequestStudent req = (QuizListFetchRequestStudent ) inReq;
                     oos.writeObject(ServerClasses.QuizListFetchStudent.quizFetch(req));
                     oos.flush();
                 }
                 if(identifier.equals(String.valueOf(reqEnum.ScoreFetchRequest)))
                 {
+                    System.out.println(reqEnum.ScoreFetchRequest);
                     ScoreFetchRequest req = (ScoreFetchRequest ) inReq;
                     oos.writeObject(ServerClasses.ScoreFetch.scoreFetch(req));
                     oos.flush();
                 }
                 if(identifier.equals(String.valueOf(reqEnum.QuizResponseRequest)))
                 {
+                    System.out.println(reqEnum.QuizResponseRequest);
                     QuizResponseRequest req = (QuizResponseRequest ) inReq;
                     oos.writeObject(ServerClasses.QuizResponse.saveResponse(req));
                     oos.flush();
