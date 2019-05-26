@@ -33,6 +33,6 @@ public class ScoreFetchRequest implements Serializable {
     @Override
     public String toString()
     {
-        return  "" + reqEnum.RankFetchRequest;
+        return  "" + reqEnum.ScoreFetchRequest;
     }
 }
