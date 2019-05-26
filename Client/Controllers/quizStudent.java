@@ -142,6 +142,7 @@ public class quizStudent {
                 throw new Exception("Server side Failure");
 
             Parent root = FXMLLoader.load(getClass().getResource("../GUI/quizCheckOut.fxml"));
+            Main.Pstage.setTitle("Quiz Results");
             Main.Pstage.setScene(new Scene(root,800,600));
 
 
@@ -187,6 +188,7 @@ public class quizStudent {
 
 
     }
+
     public void timeUp()
     {
         Alert alert = new Alert(Alert.AlertType.INFORMATION,"Time is Up!!",ButtonType.OK);
