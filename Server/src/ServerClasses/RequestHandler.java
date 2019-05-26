@@ -53,6 +53,7 @@ public class RequestHandler extends Thread
                 String identifier = inReq.toString();
                 if(identifier.equals(String.valueOf(reqEnum.LoginRequest)))
                 {
+                    System.out.println(reqEnum.LoginRequest);
                     LoginRequest req = (LoginRequest ) inReq;
                     oos.writeObject(Login.userLogin(req));
                     oos.flush();
@@ -129,24 +130,28 @@ public class RequestHandler extends Thread
                 }
                 if(identifier.equals(String.valueOf(reqEnum.RankFetchRequest)))
                 {
+                    System.out.println(reqEnum.RankFetchRequest);
                     RankFetchRequest req = (RankFetchRequest ) inReq;
                     oos.writeObject(ServerClasses.RankFetch.rankFetch(req));
                     oos.flush();
                 }
                 if(identifier.equals(String.valueOf(reqEnum.QuestionFetchRequest)))
                 {
+                    System.out.println(reqEnum.QuestionFetchRequest);
                     QuestionFetchRequest req = (QuestionFetchRequest ) inReq;
                     oos.writeObject(ServerClasses.QuestionFetch.questionFetch(req));
                     oos.flush();
                 }
                 if(identifier.equals(String.valueOf(reqEnum.QuestionAddRequest)))
                 {
+                    System.out.println(reqEnum.QuizAddRequest);
                     QuestionAddRequest req = (QuestionAddRequest ) inReq;
                     oos.writeObject(ServerClasses.QuestionAdd.questionAdd(req));
                     oos.flush();
                 }
                 if(identifier.equals(String.valueOf(reqEnum.DeactivateQuizRequest)))
                 {
+                    System.out.println(reqEnum.DeactivateQuizRequest);
                     DeactivateQuizRequest req = (DeactivateQuizRequest) inReq;
                     oos.writeObject(ServerClasses.DeactivateQuiz.deactivate(req));
                     oos.flush();
