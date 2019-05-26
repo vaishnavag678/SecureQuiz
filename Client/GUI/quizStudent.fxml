@@ -41,6 +41,26 @@
                </font>
             </Label>
             <VBox fx:id="questionContiner" layoutX="16.0" layoutY="213.0" />
+            <Label fx:id="hrLabel" layoutX="526.0" layoutY="67.0" text="00:">
+               <font>
+                  <Font size="55.0" />
+               </font>
+            </Label>
+            <Label fx:id="minLabel" layoutX="598.0" layoutY="67.0" text="00:">
+               <font>
+                  <Font size="55.0" />
+               </font>
+            </Label>
+            <Label fx:id="secLabel" layoutX="670.0" layoutY="67.0" text="00">
+               <font>
+                  <Font size="55.0" />
+               </font>
+            </Label>
+            <Label layoutX="533.0" layoutY="35.0" text="Quiz Timer">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
    </content>
