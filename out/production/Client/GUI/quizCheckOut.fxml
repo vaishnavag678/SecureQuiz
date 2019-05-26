@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.quizCheckOut">
+   <children>
+      <Label layoutX="197.0" layoutY="159.0" text="Score">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Label>
+      <Label layoutX="201.0" layoutY="233.0" text="Rank">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Label>
+      <Label fx:id="scoreLabel" layoutX="393.0" layoutY="159.0" prefHeight="46.0" prefWidth="116.0" text="Score">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Label>
+      <Label fx:id="rankLabel" layoutX="393.0" layoutY="233.0" prefHeight="46.0" prefWidth="116.0" text="Score">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Label>
+      <Button fx:id="backButton" layoutX="648.0" layoutY="14.0" mnemonicParsing="false" onAction="#backButtonClicked" prefHeight="46.0" prefWidth="84.0" text="Back" />
+   </children>
+</AnchorPane>
